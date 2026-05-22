@@ -4,7 +4,7 @@
   "description": "Express REST API backend for Project Management system with Prisma and SQLite/Postgres",
   "main": "dist/src/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "prisma generate && tsc",
     "start": "node dist/src/index.js",
     "dev": "nodemon src/index.ts",
     "prisma:generate": "prisma generate",
