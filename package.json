@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "Full-stack Project Management Web Application with RBAC",
   "main": "index.js",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
   "scripts": {
-    "postinstall": "npm run install:all",
-    "install:all": "npm install --include=dev --prefix backend && npm install --include=dev --prefix frontend",
-    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
-    "build:frontend": "npm run build --prefix frontend",
-    "build:backend": "npm run build --prefix backend",
+    "install:all": "npm install",
+    "dev": "concurrently \"npm run dev --workspace=backend\" \"npm run dev --workspace=frontend\"",
+    "build:frontend": "npm run build --workspace=frontend",
+    "build:backend": "npm run build --workspace=backend",
     "build": "npm run build:frontend && npm run build:backend",
     "start": "node backend/dist/src/index.js"
   },
