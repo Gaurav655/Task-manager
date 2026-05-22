@@ -1,0 +1,17 @@
+{
+  "name": "ethara-ai-workspace",
+  "version": "1.0.0",
+  "description": "Full-stack Project Management Web Application with RBAC",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "build:frontend": "npm run build --prefix frontend",
+    "build:backend": "npm run build --prefix backend",
+    "build": "npm run build:frontend && npm run build:backend",
+    "start": "node backend/dist/src/index.js"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
