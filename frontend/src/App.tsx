@@ -268,8 +268,8 @@ export const App: React.FC = () => {
         
         <GlassCard className="auth-card">
           <div className="auth-header">
-            <div className="logo-icon" style={{ width: '48px', height: '48px', margin: '0 auto 16px auto', fontSize: '24px' }}>E</div>
-            <h2>Ethara.AI</h2>
+            <div className="logo-icon" style={{ width: '48px', height: '48px', margin: '0 auto 16px auto', fontSize: '24px' }}>T</div>
+            <h2>Task Manager</h2>
             <p>{authView === 'LOGIN' ? 'Access your workspace dashboard' : 'Create an account to start collaborating'}</p>
           </div>
 
@@ -325,7 +325,7 @@ export const App: React.FC = () => {
           <div className="auth-redirect">
             {authView === 'LOGIN' ? (
               <>
-                New to Ethara.AI? <span onClick={() => { setAuthView('SIGNUP'); setAuthError(''); }}>Create an account</span>
+                New to Task Manager? <span onClick={() => { setAuthView('SIGNUP'); setAuthError(''); }}>Create an account</span>
               </>
             ) : (
               <>
@@ -347,8 +347,8 @@ export const App: React.FC = () => {
       {/* Sidebar Navigation */}
       <aside className="sidebar">
         <div className="sidebar-header">
-          <div className="logo-icon">E</div>
-          <span className="logo-text">Ethara.AI</span>
+          <div className="logo-icon">T</div>
+          <span className="logo-text">Task Manager</span>
         </div>
 
         {/* Project Selector Component */}

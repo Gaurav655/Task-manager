@@ -53,8 +53,8 @@ async function main() {
   // 2. Create Project
   const project = await prisma.project.create({
     data: {
-      name: 'Ethara AI Platform v1.0',
-      description: 'Developing the next generation AI-powered collaboration workspace with modern glassmorphism UI.',
+      name: 'Task Manager Platform v1.0',
+      description: 'Developing the next generation collaboration workspace with modern glassmorphism UI.',
     },
   });
 
