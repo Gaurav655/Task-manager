@@ -13,7 +13,7 @@
     "build:frontend": "npm run build --workspace=frontend",
     "build:backend": "npm run build --workspace=backend",
     "build": "npm run build:frontend && npm run build:backend",
-    "start": "node backend/dist/src/index.js"
+    "start": "npx prisma db push --schema=backend/prisma/schema.prisma && node backend/dist/src/index.js"
   },
   "dependencies": {
     "concurrently": "^8.2.2"
